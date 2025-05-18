@@ -1,0 +1,453 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 80px;
+}
+
+/* Header layout */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+/* Navbar desktop */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+    background-color: hsl(0, 0%, 48%);
+}
+
+/* Hamburger icon (3 garis) */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Transformasi ke ikon X */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #444;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.mobile-menu.show {
+    opacity: 1;
+    max-height: 500px;
+    pointer-events: auto;
+    /* cukup besar agar transisi slide smooth */
+}
+
+.mobile-menu a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+    transition: background 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: #555;
+}
+
+
+/* Profile section changes background too*/
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+.profile-frame {
+    background-color: white;
+    border: 4px solid #ddd;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-frame:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+}
+
+
+/* Photo container */
+.profile-photo-container {
+    width: 180px;
+    height: 180px;
+    border: 5px solid #999;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+}
+
+.profile-photo {
+    width: 100%;
+    /*height: 100%;*/
+    object-fit: cover;
+}
+
+.id-PU {
+    margin: 0.8rem 0 auto;
+}
+
+.id-PU::first-line {
+    font-weight: bold;
+    color: black;
+}
+
+.download-btn {
+    background-color: #ba9b9b;
+    border: none;
+    margin-top: 0.7rem;
+    padding: 0.7rem;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 12px black;
+}
+
+/* About Section */
+.about-section {
+    margin-top: 4rem;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.tentang-saya {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.tentang-saya::after {
+    content: '';
+    display: block;
+    width: 20rem;
+    height: 4px;
+    background-color: #ffcc00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Animasi tentang saya*/
+.tentang-paragraf {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tentang-paragraf:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* My Internship */
+.myInternship-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.magang-saya {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.magang-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hasil-magang {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hasil-magang:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.gambar-magang {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #ccc;
+    /* Fallback bg color if image empty */
+}
+
+.title-magang {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.deskripsi-magang {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.button-link button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-link button:hover {
+    background-color: #0056b3;
+}
+
+/* My Project */
+/* My Project Section */
+.myProject-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.project-heading {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Wrapper untuk fleksibel tata letak */
+.task-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Container grid fleksibel & konsisten */
+.myProject-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card layout seragam & fleksibel */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #ccc;
+}
+
+/* Flex untuk mendorong button ke bawah */
+.project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: left;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Tombol selalu di bawah */
+.button-project {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.button-project:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .about-section {
+        text-align: center;
+        align-items: center;
+    }
+
+    .magang-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-content {
+        text-align: center;
+    }
+}

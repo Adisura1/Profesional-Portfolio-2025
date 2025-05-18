@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="/Portfolio/image/President university.jpeg" alt="logo" class="logo">
+            <h1>Portfolio</h1>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#myinternship">My Internship</a></li>
+                <li><a href="#myproject">My Task</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#myinternship">My Internship</a>
+            <a href="#myproject">My Task</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="profile-frame">
+                <div class="profile-photo-container">
+                    <img src="/Portfolio/image/Update Profile.png" alt="Adisura Calvin" class="profile-photo">
+                </div>
+                <h2 class="profile-name">Adisura CalvinDonta</h2>
+                <p class="profile-title">Frontend Developper</p>
+                <p class="id-PU">001202100144</p>
+                <a href="cv-adisura.pdf" download>
+                    <button class="download-btn">Download CV</button>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="about-section" id="about">
+            <h1 class="tentang-saya">Tentang Saya</h1>
+            <div class="about-container">
+                <p class="tentang-paragraf">Saya mahasiswa aktif jurusan Informatika dengan minat di bidang
+                    Frontend Development. Saya memiliki pengalaman magang sebagai desainer poster di DPRD Kabupaten
+                    Bekasi, serta sebagai admin sumber daya manusia di BPPTIK Kominfo. Pengalaman tersebut mengasah
+                    kemampuan desain, komunikasi, dan pengelolaan data. Saya sangat antusias untuk terus berkembang dan
+                    siap berkontribusi dalam tim.</p>
+            </div>
+        </section>
+
+        <!-- DPRD Kabupaten Bekasi -->
+        <section class="myInternship-section" id="myinternship">
+            <h1 class="magang-saya">Magang Saya</h1>
+            <div class="magang-container">
+                <div class="hasil-magang">
+                    <img src="/Portfolio/image/DPRD Profile.jpg" alt="DPRD" class="gambar-magang">
+                    <h3 class="title-magang">DPRD Kabupaten Bekasi</h3>
+                    <p class="deskripsi-magang">
+                        Saya magang di DPRD Kabupaten Bekasi pada tanggal 19 September 2023 dan berakhir di tanggal 17
+                        Januari 2024. Saya bertugas sebagai asisten Komunikasi dan Protokol Sekretariat DPRD Kabupaten
+                        Bekasi
+                        yang menjalani kegiatan dalam hal mendesain poster hari Kemerdekaan Republik Indonesia.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/16laKiagORHsJ1pt9imVoSvOI45O6UO8j?usp=sharing"
+                        class="button-link" target="_parent">
+                        <button>Lihat</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BPPTIK Kominfo -->
+        <section class="myInternship-section">
+            <div class="magang-container">
+                <div class="hasil-magang">
+                    <img src="/Portfolio/image/BPPTIK Profile.jpg" alt="DPRD" class="gambar-magang">
+                    <h3 class="title-magang">BPPTIK Kominfo</h3>
+                    <p class="deskripsi-magang">
+                        Saya magang di BPPTIK Kominfo pada tanggal 1 Febuari 2024 dan berakhir di tanggal 30 Agustus
+                        2024. Saya bertugas sebagai Admin Pengembangan Sumber Daya Manusia yang dimana saya
+                        berkontribusi dalam hal mengundang para peserta pelatihan untuk masuk ke dalam group WhatsApp,
+                        melakukan monitoring selama pelatihan, memastikan absensi para peserta kehadiran, membantu para
+                        pengajar dalam hal mengirimi soal, tanya jawab, dan juga membuatkan jadwal zoom kelas pelatihan
+                        online.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/1SURgBlLefBn7c-5XpvdPvsYGXg3rt3FH?usp=sharing"
+                        class="button-link" target="_parent">
+                        <button>Lihat</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Task -->
+        <!-- My Task -->
+        <section class="myProject-section" id="myproject">
+            <h1 class="project-heading">Tugas Saya</h1>
+
+            <div class="task-wrapper">
+                <div class="myProject-container">
+                    <!-- Task 1 -->
+                    <div class="project-card">
+                        <img src="/Portfolio/image/DPRD Kabupaten Bekasi.jpeg" alt="Task 1" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">DPRD Kabupaten Bekasi</h3>
+                            <p class="project-description">Selama saya magang di DPRD Kabupaten Bekasi saya bertugas
+                                dalam
+                                hal desain poster serta
+                                membantu para anggota dewan lainnya. Saya juga ditugaskan untuk mengawasi kunjungi dari
+                                sekolah SMA/SMK di setiap acara study tour sekolah selama acara berlangsung.
+                            </p>
+                            <a href="https://drive.google.com/drive/folders/1SFDku8yuir3B27KwPBKUuscDSiEdKcSa?usp=sharing"
+                                target="_parent">
+                                <button class="button-project">Klik Disini</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Task 2 -->
+                    <div class="project-card">
+                        <img src="/Portfolio/image/BPPTIK Kominfo.jpeg" alt="Task 2" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">BPPTIK Kominfo</h3>
+                            <p class="project-description">Selama saya magang di BPPTIK Kominfo saya bertugas sebagai
+                                admin
+                                Sumber Daya Manusia yang dimana saya membantu untuk berkontribusi dalam hal mengundang
+                                para
+                                peserta pelatihan, melakukan absensi saat kelas berlangsung, membuat jadwal kelas zoom
+                                online, menjawab pertanyaan dari para peserta.
+                            </p>
+                            <a href="https://drive.google.com/drive/folders/1EB_eN-dQDC3QN_ktIyzKQ4oghVEIgqHK?usp=sharing"
+                                target="_parent">
+                                <button class="button-project">Klik Disini</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Task 3 -->
+                    <div class="project-card">
+                        <img src="/Portfolio/image/documentasi 5.jpg" alt="Task 3" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">BPPTIK Kominfo</h3>
+                            <p class="project-description">Saya lanjut magang di BPPTIK Kominfo sebagai Admin Sumber
+                                Daya
+                                Manusia khususnya dibagian VSGA-G12 2024 (Vocational School Graduate Academy), tugas
+                                saya
+                                masih sama dalam hal mengundang para peserta pelatihan, melakukan absensi saat pelatihan
+                                berlangsung secara barcode dan via zoom, membuat jadwal kelas zoom online berdasarkan
+                                permintaan dari pengajar pelatihan. Rutin untuk melapor setiap kegiatan pelatihan ke
+                                atasan
+                                pembimbing saya.
+                            </p>
+                            <a href="https://drive.google.com/drive/folders/1EB_eN-dQDC3QN_ktIyzKQ4oghVEIgqHK?usp=sharing"
+                                target="_parent">
+                                <button class="button-project">Klik Disini</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
