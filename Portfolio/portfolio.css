@@ -184,11 +184,14 @@ header {
     background-color: #ba9b9b;
     border: none;
     margin-top: 0.7rem;
-    padding: 0.7rem;
+    padding: 0.7rem 1.2rem;
     text-align: center;
-    align-items: center;
+    display: inline-block;
+    cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
+    color: white;
+    text-decoration: none;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
@@ -196,6 +199,7 @@ header {
     transform: scale(1.1);
     box-shadow: 0 5px 12px black;
 }
+
 
 /* About Section */
 .about-section {
