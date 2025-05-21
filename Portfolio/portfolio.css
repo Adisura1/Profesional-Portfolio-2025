@@ -297,7 +297,6 @@ header {
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #ccc;
-    /* Fallback bg color if image empty */
 }
 
 .title-magang {
@@ -328,7 +327,6 @@ header {
     background-color: #0056b3;
 }
 
-/* My Project */
 /* My Project Section */
 .myProject-section {
     padding: 60px 20px;
@@ -343,14 +341,14 @@ header {
     position: relative;
 }
 
-/* Wrapper untuk fleksibel tata letak */
+/* Wrapper fleksibel tata letak */
 .task-wrapper {
     display: flex;
     justify-content: center;
     padding: 0 20px;
 }
 
-/* Container grid fleksibel & konsisten */
+/* Container grid */
 .myProject-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -359,7 +357,7 @@ header {
     max-width: 1200px;
 }
 
-/* Card layout seragam & fleksibel */
+/* Card layout */
 .project-card {
     display: flex;
     flex-direction: column;
@@ -384,7 +382,7 @@ header {
     background-color: #ccc;
 }
 
-/* Flex untuk mendorong button ke bawah */
+/* Project Content*/
 .project-content {
     flex-grow: 1;
     display: flex;
@@ -407,7 +405,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Tombol selalu di bawah */
+/* Button */
 .button-project {
     background-color: #007BFF;
     color: white;
@@ -425,7 +423,7 @@ header {
 }
 
 
-/* Responsive untuk layar kecil */
+/* Responsive layar kecil */
 @media (max-width: 768px) {
     .navbar {
         display: none;
